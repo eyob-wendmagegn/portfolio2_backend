@@ -27,6 +27,7 @@ app.use('/api', authRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/about', aboutRoutes);
 
+
 app.get('/api/download/:filename', (req, res) => {
   const filename = req.params.filename;
   res.download(path.join(__dirname, 'uploads', filename), filename, (err) => {
